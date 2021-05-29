@@ -34,7 +34,7 @@ class CounterButton extends React.Component {
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.buttonContainer}>
         <CounterButton />
         <CounterButton />
         <CounterButton />
@@ -56,4 +56,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+   buttonContainer: {
+      alignItems: 'center',
+      width: 300,
+    },
 });
