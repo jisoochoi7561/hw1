@@ -6,6 +6,8 @@ import { FlatList, StyleSheet, Text, View } from 'react-native';
 // after `expo install react-native-safe-area-context`.
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { FlatList, StyleSheet, Text, TouchableOpacity } from 'react-native';
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -26,11 +28,15 @@ export default class App extends React.Component {
       });
    }
 
+  onPressCity(item) {
+    console.log('onPressCity =', item);
+  }
+
   renderItem(city) {
     return (
-      <View style={styles.item} >
+      <TouchableOpacity style={styles.item} onPress={this.onPressCity}>
         <Text style={styles.text}>{city}</Text>
-      </View>
+      </TouchableOpacity>
     );
   }
 
